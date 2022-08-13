@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import TodoItem from "./components/TodoItem.vue";
+import TodoItems from "./components/TodoItems.vue";
 import { useStore } from "./store";
 
 const store = useStore();
@@ -16,7 +16,7 @@ onMounted(() => {
   >
     Todos
   </h1>
-  <TodoItem :todos="store.allTodos" />
+  <TodoItems :todos="store.allTodos" />
 </template>
 
 <style scoped></style>

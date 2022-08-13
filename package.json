@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "cypress open",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cypress": "^10.4.0",
     "pinia": "^2.0.17",
     "vue": "^3.2.37"
   },

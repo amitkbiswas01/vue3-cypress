@@ -10,13 +10,20 @@ defineProps<{
 
 <template>
   <section class="border-2 border-gray-800 w-1/2 mx-auto mt-16">
-    <div v-for="todo in todos" class="border-b-2 border-gray-600">
+    <div
+      v-for="todo in todos"
+      data-test="todoitem"
+      class="border-b-2 border-gray-600"
+    >
       <div class="flex justify-between items-center mx-10 px-5 py-10">
-        <h1 class="text-3xl text-red-400 font-semibold w-3/4">
+        <h1
+          data-test="todoitem-title"
+          class="text-3xl text-red-400 font-semibold w-3/4"
+        >
           {{ todo.title }}
         </h1>
-        <TickIcon v-if="todo.completed" />
-        <CrossIcon v-else />
+        <TickIcon data-test="todoitem-tick" v-if="todo.completed" />
+        <CrossIcon data-test="todoitem-cross" v-else />
       </div>
       <p class="text-gray-800 font-mono mx-10 mb-10 px-5">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi nostrum
@@ -29,8 +36,4 @@ defineProps<{
   </section>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+<style scoped></style>
