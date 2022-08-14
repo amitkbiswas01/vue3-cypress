@@ -13,6 +13,7 @@ onMounted(() => {
 <template>
   <h1
     class="text-6xl text-red-900 text-center font-mono font-semibold mt-16 mb-8"
+    data-test="todo-header"
   >
     Todos
   </h1>

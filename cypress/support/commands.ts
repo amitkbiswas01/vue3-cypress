@@ -1,9 +1,6 @@
 /// <reference types="cypress" />
-
 export {};
 
-declare global {
-  namespace Cypress {
-    interface Chainable {}
-  }
-}
+import { mount } from "cypress/vue";
+
+Cypress.Commands.add("mount", mount);

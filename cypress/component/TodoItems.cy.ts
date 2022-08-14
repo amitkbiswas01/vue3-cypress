@@ -1,9 +1,7 @@
 import TodoItems from "../../src/components/TodoItems.vue";
-import TickIcon from "../../src/components/TickIcon.vue";
-import CrossIcon from "../../src/components/CrossIcon.vue";
 export {};
 
-describe("TodoItems.cy.ts", () => {
+describe("TodoItems.vue", () => {
   it("Mounts TodoItems", () => {
     cy.fixture("todos").then((todos) => {
       cy.mount(TodoItems, {

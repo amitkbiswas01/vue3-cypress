@@ -1,13 +1,22 @@
+import { createTestingPinia, TestingOptions } from "@pinia/testing";
+import { useStore } from "../../src/store";
+import App from "../../src/App.vue";
 import "./commands";
 import "../../src/style.css";
-import { mount } from "cypress/vue";
 
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      mount: typeof mount;
-    }
-  }
-}
+const mountApp = (options?: TestingOptions) => {
+  cy.mount(App, {
+    global: {
+      plugins: [
+        createTestingPinia({
+          stubActions: false,
+          createSpy: cy.spy,
+          ...options,
+        }),
+      ],
+    },
+  });
+  return useStore();
+};
 
-Cypress.Commands.add("mount", mount);
+export { mountApp };

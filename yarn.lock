@@ -70,6 +70,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pinia/testing@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@pinia/testing/-/testing-0.0.13.tgz#a0059a1ca2bc62b7c0f1a60daf3219c0827f1638"
+  integrity sha512-OiqJzUzHrBetqYZ0IrT4MCz4WGViVLjWlsC6xhyf6t/PDUR5IxeLK3HJcP4i3y6Pq4+IVLYhu6xfy1PGfY9p5Q==
+  dependencies:
+    vue-demi "*"
+
 "@types/node@*":
   version "18.7.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.3.tgz#432c89796eab539b7a30b7b8801a727b585238a4"
